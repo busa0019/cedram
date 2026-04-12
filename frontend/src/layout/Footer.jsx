@@ -131,17 +131,17 @@ function Footer() {
             <div className="mt-5 space-y-4 text-sm text-white/80">
               <div className="flex items-start gap-3">
                 <Mail size={16} className="mt-0.5 text-accent" />
-                <span>info@cedram.org.ng</span>
+                <span>info@ecrmi.org.ng</span>
               </div>
 
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-accent" />
-                <span>No. 3 Relief Crescent, Ikeja GRA, Ikeja, Lagos, Nigeria</span>
+                <span>No 6/8, Ogunnusi road, 3rd Floor, Left Wing, Bamboo Plaza Opposite NNPC Filing Station, Ogunnusi B/Stop, Ojodu, Ikeja</span>
               </div>
 
               <div className="flex items-start gap-3">
                 <Globe size={16} className="mt-0.5 text-accent" />
-                <span>National center for disaster risk data, research, and information management</span>
+                <span>www.ecrmi.org.ng</span>
               </div>
             </div>
 
