@@ -23,6 +23,8 @@ import Support from "./pages/Support";
 import Programs from "./pages/Programs";
 import Training from "./pages/Training";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import CreateArticle from "./pages/CreateArticle";
@@ -43,6 +45,7 @@ import IncidentHistory from "./pages/IncidentHistory";
 import AdminTrainings from "./pages/AdminTrainings";
 import CreateTraining from "./pages/CreateTraining";
 import EditTraining from "./pages/EditTraining";
+
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -71,16 +74,18 @@ function App() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        {/* PUBLIC ROUTES */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Page><Home /></Page>} />
-          <Route path="/about" element={<Page><About /></Page>} />
+    <>
+      <ScrollToTop />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          {/* PUBLIC ROUTES */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Page><Home /></Page>} />
+            <Route path="/about" element={<Page><About /></Page>} />
 
-          <Route path="/programs" element={<Page><Programs /></Page>} />
-          <Route path="/training" element={<Page><Training /></Page>} />
-          <Route path="/contact" element={<Page><Contact /></Page>} />
+            <Route path="/programs" element={<Page><Programs /></Page>} />
+            <Route path="/training" element={<Page><Training /></Page>} />
+            <Route path="/contact" element={<Page><Contact /></Page>} />
 
           <Route path="/research" element={<Page><ResearchList /></Page>} />
           <Route path="/research/:slug" element={<Page><ResearchArticle /></Page>} />
@@ -282,6 +287,7 @@ function App() {
         </Route>
       </Routes>
     </AnimatePresence>
+    </>
   );
 }
 
