@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   FileText,
 } from "lucide-react";
+import logo from "../assets/logo.jpeg";
 
 function Navbar() {
   const location = useLocation();
@@ -121,8 +122,6 @@ function Navbar() {
   const desktopLinkColor = (path) =>
     isAdminRoute ? adminLinkColor(path) : publicLinkColor(path);
 
-  const brandTextClass = isAdminRoute ? "text-primary" : "text-white";
-
   const mobileDrawer = isOpen
     ? createPortal(
         <div className="fixed inset-0 z-[2147483647] lg:hidden">
@@ -136,10 +135,10 @@ function Navbar() {
             <div className="flex items-center justify-between">
               <Link
                 to="/"
-                className="text-lg font-bold tracking-tight text-primary"
+                className="flex items-center"
                 onClick={() => setIsOpen(false)}
               >
-                CEDRAM
+                <img src={logo} alt="CEDRAM Logo" className="h-10 w-auto" />
               </Link>
 
               <button
@@ -249,14 +248,8 @@ function Navbar() {
             scrolled ? "h-[72px]" : "h-20"
           )}
         >
-          <Link
-            to="/"
-            className={classNames(
-              "shrink-0 text-lg font-bold tracking-tight transition lg:text-xl",
-              brandTextClass
-            )}
-          >
-            CEDRAM
+          <Link to="/" className="flex items-center shrink-0">
+            <img src={logo} alt="CEDRAM Logo" className="h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-9">

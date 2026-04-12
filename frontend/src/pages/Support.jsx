@@ -376,12 +376,12 @@ function Support() {
 
           <div className="mt-10 rounded-[32px] border border-border bg-muted/50 p-8 shadow-sm md:p-10">
             <div className="grid gap-5 md:grid-cols-2">
-              <DetailRow label="Account Name" value="CEDRAM" copyable />
-              <DetailRow label="Bank Name" value="Your Bank Name" copyable />
-              <DetailRow label="Account Number" value="0123456789" copyable />
+              <DetailRow label="Account Name" value="ECRMI" copyable />
+              <DetailRow label="Bank Name" value="UBA" copyable />
+              <DetailRow label="Account Number" value="1013635573" copyable />
               <DetailRow
                 label="Support Contact"
-                value="info@cedram.org.ng"
+                value="registrarecrmi@yahoo.com"
                 copyable
               />
             </div>
