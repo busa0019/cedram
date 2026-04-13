@@ -8,6 +8,8 @@ import {
   Globe,
   HeartHandshake,
 } from "lucide-react";
+import CedramWordmark from "../components/CedramWordmark";
+import CedramMark from "../components/CedramMark";
 
 function Footer() {
   return (
@@ -19,7 +21,7 @@ function Footer() {
         <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-secondary blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <div className="relative mx-auto max-w-7xl px-6 py-14 md:py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur-sm">
@@ -27,9 +29,10 @@ function Footer() {
               Emergency & disaster risk data center
             </div>
 
-            <h3 className="mt-5 text-xl font-bold tracking-tight">
-              CEDRAM
-            </h3>
+            <Link to="/" className="mt-5 inline-flex items-center gap-3" aria-label="CEDRAM home">
+              <CedramMark className="h-11 w-11 shrink-0" light />
+              <CedramWordmark className="h-8 w-auto" light />
+            </Link>
 
             <p className="mt-4 text-sm leading-7 text-white/80">
               The Center for Emergency & Disaster Risk Data Analytics, Research,
@@ -136,7 +139,10 @@ function Footer() {
 
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-accent" />
-                <span>No 6/8, Ogunnusi road, 3rd Floor, Left Wing, Bamboo Plaza Opposite NNPC Filing Station, Ogunnusi B/Stop, Ojodu, Ikeja</span>
+                <span>
+                  No 6/8, Ogunnusi road, 3rd Floor, Left Wing, Bamboo Plaza
+                  Opposite NNPC Filing Station, Ogunnusi B/Stop, Ojodu, Ikeja
+                </span>
               </div>
 
               <div className="flex items-start gap-3">
@@ -170,7 +176,9 @@ function Footer() {
             <div>
               <div className="text-sm font-semibold">Structured reporting</div>
               <div className="mt-1 text-xs text-white/70">
-                Disaster and emergency information is documented in structured formats to support validation, analysis, and informed response planning.
+                Disaster and emergency information is documented in structured
+                formats to support validation, analysis, and informed response
+                planning.
               </div>
             </div>
           </div>
@@ -180,7 +188,9 @@ function Footer() {
             <div>
               <div className="text-sm font-semibold">Research and analytics</div>
               <div className="mt-1 text-xs text-white/70">
-                Data is transformed into insights, reports, and evidence that support policy development, preparedness, and resilience building.
+                Data is transformed into insights, reports, and evidence that
+                support policy development, preparedness, and resilience
+                building.
               </div>
             </div>
           </div>
@@ -188,9 +198,13 @@ function Footer() {
           <div className="flex items-start gap-3">
             <ShieldCheck size={18} className="mt-0.5 text-accent" />
             <div>
-              <div className="text-sm font-semibold">Trusted information management</div>
+              <div className="text-sm font-semibold">
+                Trusted information management
+              </div>
               <div className="mt-1 text-xs text-white/70">
-                Governed workflows, responsible data handling, and verification processes help maintain quality, accountability, and institutional confidence.
+                Governed workflows, responsible data handling, and verification
+                processes help maintain quality, accountability, and
+                institutional confidence.
               </div>
             </div>
           </div>

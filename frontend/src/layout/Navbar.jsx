@@ -8,7 +8,8 @@ import {
   ShieldCheck,
   FileText,
 } from "lucide-react";
-import logo from "../assets/logo.jpeg";
+import CedramWordmark from "../components/CedramWordmark";
+import CedramMark from "../components/CedramMark";
 
 function Navbar() {
   const location = useLocation();
@@ -132,13 +133,17 @@ function Navbar() {
           />
 
           <div className="absolute top-0 right-0 h-full w-[90%] max-w-sm overflow-y-auto bg-surface p-6 text-textmain shadow-2xl">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-4">
               <Link
                 to="/"
                 className="flex items-center"
                 onClick={() => setIsOpen(false)}
+                aria-label="CEDRAM home"
               >
-                <img src={logo} alt="CEDRAM Logo" className="h-10 w-auto" />
+                <div className="flex items-center gap-3">
+                  <CedramMark className="h-9 w-9 shrink-0" light={false} />
+                  <CedramWordmark className="h-6 w-auto" light={false} />
+                </div>
               </Link>
 
               <button
@@ -248,8 +253,15 @@ function Navbar() {
             scrolled ? "h-[72px]" : "h-20"
           )}
         >
-          <Link to="/" className="flex items-center shrink-0">
-            <img src={logo} alt="CEDRAM Logo" className="h-12 w-auto" />
+          <Link
+            to="/"
+            className="flex items-center shrink-0"
+            aria-label="CEDRAM home"
+          >
+            <CedramWordmark
+              className="h-11 md:h-12 w-auto"
+              light={!isAdminRoute}
+            />
           </Link>
 
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-9">
